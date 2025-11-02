@@ -1,0 +1,139 @@
+:root {
+  --overlay: 
+    radial-gradient(circle at 20% 30%, #00A870, transparent 60%),
+    radial-gradient(circle at 70% 60%, #008388, transparent 60%),
+    #004851;
+}
+
+/* Top Login como fundo atrás do pop-up */
+.topLogin {
+  position: absolute; /* fica atrás do login */
+  top: 0; /* topo da página */
+  left: 0;
+  width: 100%;
+  height: 27rem; /* altura do topo/banner */
+  background: var(--overlay);
+  z-index: 0; /* atrás do login */
+}
+
+/* Tela de fundo */
+.login-page {
+  position: relative; /* necessário para o .topLogin absoluto */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #fdf8ef;
+  font-family: 'Arial', sans-serif;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  min-height: 100vh;
+  z-index: 1; /* fica acima do .topLogin */
+}
+
+/* Caixa central */
+.login-frame {
+  display: flex;
+  width: 100rem;
+  max-width: 90%;
+  height: 40rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+  position: relative;
+  z-index: 2; /* garante que fique acima do topo */
+}
+
+/* Lado esquerdo */
+.login-left {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.login-left h2 {
+  margin-bottom: 40px;
+  color: #0f1c42;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.login-left input {
+  margin-bottom: 25px;
+  padding: 18px 20px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 16px;
+  width: 70%;
+}
+
+.forgot-password {
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: #969696;
+  text-decoration: none;
+  align-self: center;
+}
+
+.btn-login {
+  padding: 16px 40px;
+  background-color: #004d4d;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+  width: 50%;
+}
+
+.btn-login:hover {
+  background-color: #006666;
+}
+
+/* Lado direito */
+.login-right {
+  flex: 1;
+  padding: 40px;
+  background: linear-gradient(90deg, #378372, #00545A);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.login-right h2 {
+  margin-bottom: 40px;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.login-right p {
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.btn-register {
+  padding: 16px 40px;
+  font-weight: bold;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+  width: 50%;
+}
+
+.btn-register:hover {
+  background-color: rgba(255, 255, 255, 0.432);
+}
